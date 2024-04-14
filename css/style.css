@@ -1,0 +1,100 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+
+html, body {
+    height: 100%;
+    background-color: aliceblue;
+    counter-reset: section;
+}
+
+header {
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+    padding: 3%;
+}
+
+header > div {
+    font-family: "Noto Sans Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+    font-weight: 600;
+    text-align: center;
+}
+
+h2::before {
+    counter-increment: section;
+    content: counter(section) " ";
+    display: inline-block;
+    width: 30px; 
+    height: 30px; 
+    border-radius: 50%; 
+    text-align: center; 
+    line-height: 30px; 
+    color: black; 
+    margin-right: 5px; 
+    border: 2px solid rgb(255, 0, 0); 
+  }
+
+ul {
+    margin-left: 7%;
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li:before {
+    content: "-";
+    margin-right: 5px; 
+    font-size: 1.5em;
+}
+
+ul li:nth-child(even) {
+    color: red;
+}
+
+.flex-container {
+    display: flex;    
+    flex-wrap: wrap;
+    height: 100%;
+}
+
+.flex-container > div {
+    border: 2px solid rgb(0, 0, 0);
+    width: 50%;
+    padding: 1%;
+    height: 27vw;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+@media only screen and (max-width: 768px) {
+    .flex-container { 
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .flex-container > div {
+        width: 100%;
+        height: 50%;
+    }
+
+    header > div { font-size: 6vw };
+}
