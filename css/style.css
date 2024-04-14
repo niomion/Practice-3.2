@@ -17,17 +17,55 @@ header {
     padding: 3%;
 }
 
+li {
+ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ font-weight: 500;
+ font-optical-sizing: auto;
+ font-size: 18px;
+}
+
 header > div {
     font-family: "Noto Sans Mono", monospace;
     font-optical-sizing: auto;
-    font-weight: 500;
     font-style: normal;
     font-variation-settings:
       "wdth" 100;
     color: rgb(255, 255, 255);
-    font-size: 30px;
-    font-weight: 600;
+    font-size: 26px;
+    font-weight: 900;
     text-align: center;
+}
+
+.flex-link {
+    display: flex;
+    justify-content: center; 
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+}
+
+img {
+    opacity: 1;
+    transition: opacity 0.3s ease 0s;
+}
+
+img:hover {
+    border-radius: 50px;
+    opacity: 0.6;
+}
+
+.flex-link > div {
+margin-top: 0.5%;
+padding-right: 2%;
+}
+
+h2 {
+    font-family: "Noto Sans Mono", monospace;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 600;
+    color: rgb(0, 0, 0);
+    font-size: 26px;
 }
 
 h2::before {
@@ -39,9 +77,11 @@ h2::before {
     border-radius: 50%; 
     text-align: center; 
     line-height: 30px; 
-    color: black; 
+    color: rgb(255, 255, 255); 
     margin-right: 5px; 
-    border: 2px solid rgb(255, 0, 0); 
+    background: linear-gradient(45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
   }
 
 ul {
